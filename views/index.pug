@@ -1,0 +1,19 @@
+
+extends layout
+block content
+  div.container
+    h1 Simple CRUD UI
+    table.table
+      thead
+        tr
+          th Item
+          th Actions
+      tbody
+        each item in items
+          tr
+            td #{item}
+            td
+              a.btn.btn-primary(href=`/edit/${item}`) Edit
+              a.btn.btn-danger(href=`/delete/${item}`) Delete
+    a.btn.btn-success(href="/add") Add Item
+
